@@ -1,0 +1,15 @@
+git commit --amend : modifying last git commit to include the newer one after the last commit
+
+gir rebase <target branch> : apply the changes from one branch on top of another branch.
+
+git rebase -i HEAD~<last numbers of commit> : opens an interactive editor where it can be specify how each commit should be modified or handled during the rebase operation.
+
+-------------------------------------------
+
+For git amend never amend commits that have been pushed to remote repositories.
+
+For git rebase never rebase a repository that others may work off of.
+
+For git reset never reset commits that have been pushed to remote repositories.
+
+For git push --force only use it when appropriate, use it with caution, and preferably default to using git push --force-with-lease.
