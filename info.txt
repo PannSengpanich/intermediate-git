@@ -1,9 +1,19 @@
-git commit --amend : modifying last git commit to include the newer one after the last commit
+git commit --amend : modifying the pointer git commit to include the newer one after the pointer commit
 
 gir rebase <target branch> : apply the changes from one branch on top of another branch.
 
-git rebase -i HEAD~<last numbers of commit> : opens an interactive editor where it can be specify how each commit should be modified or handled during the rebase operation.
+git rebase -i HEAD~<last numbers of commit> : opens an interactive editor where it can be specify how each commit should be modified or handled during the rebase operation in order from oldest to latest commits
 
+git rebase --continue: resume the rebase process after resolving conflicts or making changes during an interactive rebase.
+
+pick (interactive mode): keep the commit as it is without making any changes.
+
+edit (interactive mode): rebase process and make changes to the selected commit.
+
+squash (interactive mode): combining multiple commits into a single commit.
+
+git reset HEAD~<last numbers of commit>:  
+moves the branch pointer and resets the staging area
 -------------------------------------------
 
 For git amend never amend commits that have been pushed to remote repositories.
